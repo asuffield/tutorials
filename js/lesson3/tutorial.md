@@ -181,7 +181,7 @@ the list. Change your addToList function so that when you call
 `addToList('build a website')`, it adds this html code:
 
 ```html
-<li>build a website<span class='label pending'>Pending</span></li>
+<li>build a website<span class="label pending">Pending</span></li>
 ```
 
 Refresh the page and try it again. You should see something that looks
@@ -205,7 +205,7 @@ itself, it is not a jQuery object. We can fix that by passing it to
 the `$()` function, as `$(this)`.
 
 In our case, the element that the event came from is the `<span
-class='label pending'>` element that was clicked on. We can use the
+class="label pending">` element that was clicked on. We can use the
 jQuery `.parent()` method to find the parent of that element, which
 will be the `<li>`.
 
@@ -216,7 +216,7 @@ var li_node = $(this).parent();
 ```
 
 Now that you have the right list item, use `.append()` to add a new
-label `<span class='label success'>Done!</span>`, and then use
+label `<span class="label success">Done!</span>`, and then use
 `.remove()` to remove the Pending label.
 
 ### Bonus
@@ -422,7 +422,7 @@ method to add something to the start of an element, and something like
 this to make the new box:
 
 ```js
-"<div class='item' style='background-color: " + color + ";'></div>"
+'<div class="item" style="background-color: ' + color + ';"></div>'
 ```
 
 > Run `addBox('FF0033')` from the console to make sure your code works.
